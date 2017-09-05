@@ -16,3 +16,10 @@ Route::get('/', function () {
 });
 
 Route::resource('ajaxtest','AjaxController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/redirect', 'SocialAuthController@redirect');
+Route::get('/callback', 'SocialAuthController@callback');
