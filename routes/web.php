@@ -17,6 +17,9 @@ Route::get('/', function () {
 
 Route::resource('ajaxtest','AjaxController');
 
+Route::resource('product','ProductController');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
