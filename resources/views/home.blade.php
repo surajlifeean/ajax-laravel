@@ -13,8 +13,11 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                   
+                  <a href="{{route('send')}}" class="btn btn-default">Send Notifications</a>
+                   @if(Session::has('success'))
+                         {{ Session::get('success')}}
+                    @endif
                 </div>
             </div>
         </div>
